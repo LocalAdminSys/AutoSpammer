@@ -1,0 +1,4 @@
+commentjson==0.9.0
+PyAutoGUI==0.9.54
+pyperclip==1.11.0
+Unidecode==1.4.0

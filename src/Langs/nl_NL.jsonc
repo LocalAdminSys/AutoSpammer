@@ -1,0 +1,69 @@
+{
+    // text in the main.py file
+    "main.py": {
+        "language_selected": "\nde applicatie wordt in het Nederlands weergegeven.",
+        "UnknownError": "Er is een onbekende fout opgetreden tijdens de bewerking. \nbeschrijving: {e}",
+        "delay_question":  "hoeveel seconden wil je tussen elk bericht? \n\n",
+        "__version__": "\n\nhuidige versie: '{version}'",
+        "different_msg_question":  "\n\nVul in hoeveel verschillende berichten je wilt versturen {limits}. \n\nOPMERKING: er wordt NIET gevraagd hoe vaak één bericht wordt verstuurd, maar hoeveel VERSCHILLENDE berichten er zullen zijn.\nje kiest later hoe vaak elk bericht wordt verstuurd. \n\ner zullen zoveel verschillende berichten worden verstuurd: ",
+        "list_commands": "\n\nongeldige invoer. alleen de volgende invoeren zijn hier geldig: \n\n\teen getal binnen de limieten: \n\t\tbepaalt hoeveel verschillende berichten worden verstuurd en gaat verder. \n\trecords: \n\t\ttoont opgeslagen registeritems en laat je er één laden. \n\tversie: \n\t\ttoont de huidige versie. \n\tafsluiten: \n\t\tsluit het programma. \n\tverwijderen: \n\t\tverwijdert de hoofdregistersleutel en de inhoud die door het programma is aangemaakt. \n\n",
+        "amount_question": "aantal: ",
+        "start":  "\n\nMAAK JE KLAAR, DE SPAM BEGINT EN JE HEBT \"{waiting_period}\" SECONDEN VOORDAT HET START!!!!\n\n",
+        "writing_amount_question":  "\nje hebt al je berichten geselecteerd. nu moet je kiezen \nhoe vaak elk bericht in totaal wordt verstuurd. \n\nelk bericht wordt in totaal zo vaak verstuurd {limits}: ",
+        "start_delay_question":  "\nwanneer je nu op enter drukt, moet je kiezen na hoeveel seconden \nde spam zal beginnen. \n\nik zal zoveel tijd hebben {limits}: ",
+        "ready_txt": "\nalles is klaar. zodra je op \"ENTER\" drukt \nheb je \"{waiting_period}\" seconden voordat in totaal \"{total_msg}\" berichten worden verstuurd.\n",
+        "msg_no": "{msg_no}. bericht: ",
+        "amount_info": "je hebt je keuze gemaakt. jouw keuze: {different_msg_amount}",
+        "msg_preparation": "\nwe zullen vragen wat er in elk bericht moet staan, in totaal zullen er \"{different_msg_amount}\" vragen zijn.",
+        "quit_txt": "je hebt ervoor gekozen niet door te gaan. afsluiten...",
+        "invalid_option": "\n\nvoer een geldige optie in\n\n",
+        "reg_save_question": "je kunt de zojuist uitgevoerde spam opslaan in het register en deze de volgende keer snel openen. \nwil je dit? \n\nY/JA : ja, sla de huidige spam op.\nN/NEE : nee, sla de huidige spam niet op. \n\njouw keuze: ",
+        "again_question": "\n\nwil je nog een ronde met dezelfde berichten?\n\nY/JA : ja, start dezelfde cyclus opnieuw. \nN/NEE : nee, sluit het programma. \n\njouw keuze: "
+    },
+
+
+    // text in the RegCleanUp_mgr.py file
+    "RegCleanUp_mgr.py": {
+        "cleanup_options": "\n\nwat wil je verwijderen? \n\n1: Hoofdregistersleutel (HKCU\\Software\\AutoSpammer) \n2: Een specifieke registersleutel (HKCU\\Software\\AutoSpammer\\[naam van save]) \n3: Annuleren", 
+        "your_choice": "\n\njouw keuze: ",
+        "invalid_option": "\n\nvoer een geldige optie in\n\n",
+        "saves_list": "\ndit zijn je huidige saves: \n\n",
+        "no_save_found": "\n\ner zijn momenteel geen saves. om er één te maken, voer een spam uit met je gewenste instellingen, \naccepteer de opslaan-vraag na de spam en kies een naam. als de vraag zelfs na de spam niet verschijnt, open dan de code in een editor en controleer of de constante 'ALLOW_SAVE_SPAM_QUESTION' \nin de eerste regels van 'src\\main.py' op 'True' staat.",
+        "operation_cancelled": "\n\nde bewerking is geannuleerd. er is niets verwijderd.",
+        "SAFE_MODE": "\n\nde registersleutel kon niet worden verwijderd omdat de beveiligingsvergrendeling is ingeschakeld. schakel deze uit als je de actie wilt uitvoeren en probeer opnieuw.",
+        "UnknownError": "\n\ner is een onbekende fout opgetreden tijdens de bewerking. de bewerking is mislukt. \nfout: {e}",
+        "approve_deletion": "\n{key} zal permanent worden verwijderd. bevestig je dit? (J/N)\n\n",
+        "powershell_script_running": "\neen powershell-script wordt uitgevoerd.",
+        "SubprocessError": "\n\ner is een fout opgetreden tijdens het uitvoeren van het powershell-script. de bewerking is mislukt. voor meer informatie kun je het bestand {log_file} bekijken.",
+        "FileNotFoundError": "\n\n'RegCleaner.ps1' niet gevonden. mogelijk verwijderd of hernoemd. de bewerking is mislukt.",
+        "successfully_deleted": "bewerking voltooid. voor meer informatie kun je het bestand {log_file} bekijken."
+    },
+
+
+    // text in the GetPath function
+    "get_path": {
+        "KeyError": "Fout: er is een fout in de opgegeven parameter, corrigeer deze en probeer opnieuw. Onjuiste parameter: \"{TargetObj}\"",
+        "UnknownError": "Er is een onbekende fout opgetreden tijdens het ophalen van de gevraagde locatie. \nbeschrijving: {e}"
+    },
+
+    // text in the list_saves function
+    "list_saves": {
+        "UnknownError": "Er is een onbekende fout opgetreden tijdens het proberen om de saves te tonen. De bewerking is mislukt. \nbeschrijving: {e}"
+    },
+
+
+    // text in the reg_save function
+    "reg_save": {
+        "InvalidParameterError": "De opgegeven parameter(s) zijn onjuist of ontbreken. \ncontroleer de parameters die naar de reg_save-functie zijn gestuurd en probeer opnieuw.", 
+        "NoSaveError": "\n\nje hebt nog geen enkele save gemaakt. om er één te maken, voer een spam uit met je gewenste instellingen, \naccepteer de opslaan-vraag na de spam en kies een naam. als de vraag zelfs na de spam niet verschijnt, open dan de code in een editor en controleer of de constante 'ALLOW_SAVE_SPAM_QUESTION' \nin de eerste regels van 'AutoSpammer\\main.py' op 'True' staat.",
+        "list_saves": "\n\nhier zijn de huidige saves:\n",
+        "load_save": "welke save wil je laden? voer het nummer in van de save die je wilt laden. \n\nde save die je wilt laden: ",
+        "save_name": "wat moet de naam zijn van de nieuwe spam-save?\n\nde naam van de nieuwe save zal zijn: ",
+        "successfully_saved": "\n\nde nieuwe save is succesvol aangemaakt. savenaam: '{save_name}' \n\nom deze save snel te gebruiken hoef je alleen maar 'saves' te typen bij de start in plaats van een nummer en de gewenste save te kiezen.",
+        "FileExistsError": "er bestaat al een save met deze naam. opties: \n\n1: kies een andere naam \n\n2: overschrijven \n\n3) annuleren \n\njouw keuze: ",
+        "PermissionError": "toegang geweigerd tijdens het maken/bewerken van saves. de bewerking is mislukt.",
+        "UnknownError": "er is een onbekende fout opgetreden tijdens het maken/bewerken van saves. de bewerking is mislukt. \nfout: {e}",
+        "invalid_key_name": "\n\nde naam van een registersleutel mag geen '\\' bevatten. voer een geldige sleutelnaam in",
+        "invalid_option": "voer een geldige optie in"
+    }
+}

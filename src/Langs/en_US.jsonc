@@ -1,0 +1,69 @@
+{
+    // text in the main.py file
+    "main.py": {
+        "language_selected": "\nthe application will be displayed in English.",
+        "UnknownError": "An unknown error occurred during the operation. \ndescription: {e}",
+        "delay_question":  "how many seconds do you want between each message? \n\n",
+        "__version__": "\n\ncurrent version: '{version}'",
+        "different_msg_question":  "\n\nEnter how many different messages you will send {limits}. \n\nNOTE: you are NOT being asked how many times a message will be sent, but how many DIFFERENT messages will be sent.\nyou will choose how many times each one will be sent later. \n\nthis many different messages will be sent: ",
+        "list_commands": "\n\ninvalid input. only the following inputs are valid at this point: \n\n\ta number within limits: \n\t\tdetermines how many different messages will be sent and continues. \n\tsaves: \n\t\tshows saved registry entries and lets you load one. \n\tversion: \n\t\tshows the current version. \n\texit/quit: \n\t\tcloses the program. \n\tdelete: \n\t\tdeletes the registry main key and its contents created by the program. \n\n",
+        "amount_question": "amount: ",
+        "start":  "\n\nGET READY, SPAM IS STARTING AND YOU HAVE \"{waiting_period}\" SECONDS BEFORE IT BEGINS!!!!\n\n",
+        "writing_amount_question":  "\nyou selected all your messages. now you need to choose \nhow many times each message will be sent in total. \n\neach message will be sent this many times {limits}: ",
+        "start_delay_question":  "\nnow when you press enter, you must choose how many seconds later \nthe spam will start. \n\nI will have this much time {limits}: ",
+        "ready_txt": "\neverything is ready. once you press \"ENTER\" \nyou will have \"{waiting_period}\" seconds before a total of \"{total_msg}\" messages rain down.\n",
+        "msg_no": "{msg_no}. message: ",
+        "amount_info": "you made your selection. your choice: {different_msg_amount}",
+        "msg_preparation": "\nwe will ask you what will be written in each message, there will be a total of \"{different_msg_amount}\" questions.",
+        "quit_txt": "you chose not to continue. exiting...",
+        "invalid_option": "\n\nplease enter a valid option\n\n",
+        "reg_save_question": "you can save the spam that just occurred to the registry and quickly access it next time. \ndo you want this? \n\nY/YES : yes, save the current spam.\nN/NO  : no, do not save the current spam. \n\nyour choice: ",
+        "again_question": "\n\ndo you want another round with the same messages?\n\nY/YES : yes, restart the same loop. \nN/NO  : no, close the program. \n\nyour choice: "
+    },
+
+
+    // text in the RegCleanUp_mgr.py file
+    "RegCleanUp_mgr.py": {
+        "cleanup_options": "\n\nwhat do you want to delete? \n\n1: Main registry key (HKCU\\Software\\AutoSpammer) \n2: A specific registry key (HKCU\\Software\\AutoSpammer\\[save name]) \n3: Cancel", 
+        "your_choice": "\n\nyour choice: ",
+        "invalid_option": "\n\nplease enter a valid option\n\n",
+        "saves_list": "\nhere are your current saves: \n\n",
+        "no_save_found": "\n\nthere are currently no saves. to create one, run a spam with your desired settings, \naccept the save question asked after the spam, and choose a name. if the question is not asked \neven after the spam ends, open the code in an editor and make sure the 'ALLOW_SAVE_SPAM_QUESTION' constant \nin the first lines of 'src\\main.py' is set to 'True'.",
+        "operation_cancelled": "\n\nthe operation was cancelled. nothing was deleted.",
+        "SAFE_MODE": "\n\nthe registry could not be deleted because the safety lock is enabled. if you approve this action, disable the safety lock and try again.",
+        "UnknownError": "\n\nan unknown error occurred during the operation. the operation failed. \nerror: {e}",
+        "approve_deletion": "\n{key} key will be permanently deleted. do you approve? (Y/N)\n\n",
+        "powershell_script_running": "\na powershell script is being executed.",
+        "SubprocessError": "\n\nan error occurred while running the powershell script. the operation failed. for more information, check the {log_file} file.",
+        "FileNotFoundError": "\n\n'RegCleaner.ps1' not found. it may have been deleted or renamed. the operation failed.",
+        "successfully_deleted": "operation completed. for more information, check the {log_file} file."
+    },
+
+
+    // text in the GetPath function
+    "get_path": {
+        "KeyError": "Error: There is an error in the given parameter, please correct the parameter and try again. Wrong parameter: \"{TargetObj}\"",
+        "UnknownError": "An unknown error occurred while trying to retrieve the requested location. \ndescription: {e}"
+    },
+
+    // text in the list_saves function
+    "list_saves": {
+        "UnknownError": "An unknown error occurred while trying to list the saves. The operation failed. \ndescription: {e}"
+    },
+
+
+    // text in the reg_save function
+    "reg_save": {
+        "InvalidParameterError": "The given parameter(s) are incorrect or missing. \nplease check the parameters sent to the reg_save function and try again.", 
+        "NoSaveError": "\n\nyou have not created any saves yet. to create one, run a spam with your desired settings, \naccept the save question asked after the spam, and choose a name. if the question is not asked \neven after the spam ends, open the code in an editor and make sure the 'ALLOW_SAVE_SPAM_QUESTION' constant \nin the first lines of 'src\\main.py' is set to 'True'.",
+        "list_saves": "\n\nhere are the current saves:\n",
+        "load_save": "which save do you want to load? please enter the number of the save you want to load. \n\nthe save you want to load: ",
+        "save_name": "what should be the name of the new spam save?\n\nthe name of the new save will be: ",
+        "successfully_saved": "\n\nthe new save was created successfully. save name: '{save_name}' \n\nto quickly use this save, all you need to do is type 'saves' at the start instead of a number and select the save you want to load.",
+        "FileExistsError": "a save with this name already exists. options: \n\n1: choose another name \n\n2: overwrite \n\n3) cancel \n\nyour choice: ",
+        "PermissionError": "access denied while trying to create/process saves. the operation failed.",
+        "UnknownError": "an unknown error occurred while creating/processing saves. the operation failed. \nerror: {e}",
+        "invalid_key_name": "\n\nthe name of a registry key cannot contain '\\'. please enter a valid key name",
+        "invalid_option": "please enter a valid option"
+    }
+}

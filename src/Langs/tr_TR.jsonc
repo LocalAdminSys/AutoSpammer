@@ -1,0 +1,69 @@
+{
+    // text in the main.py file
+    "main.py": {
+        "language_selected": "\nuygulama Türkçe olarak görüntülenecek.",
+        "UnknownError": "İşlem sırasında bilinmeyen bir hata oluştu. \naçıklama: {e}",
+        "delay_question":  "Her mesaj arasında kaç saniye olmasını istiyorsunuz? \n\n",
+        "__version__": "\n\nMevcut versiyon: '{version}'",
+        "different_msg_question":  "\n\nKaç tane birbirinden farklı mesaj göndereceğinizi yazın {limits}. \n\nNOT: Sizden istenen bir mesajın kaç kere yazılacağı DEĞİL, birbirinden farklı kaç mesaj yazılacağıdır.\nHer birinin kaç kere yazılacağını ileride seçeceksiniz. \n\nŞu kadar farklı mesaj gönderilecek: ",
+        "list_commands": "\n\nGeçersiz giriş. Bu noktada yalnızca şu girdiler geçerlidir: \n\n\tLimitlere uygun bir sayı: \n\t\tKaç farklı mesaj gönderileceği öğrenilir ve devam edilir. \n\tKayıtlar: \n\t\tKaydedilmiş kayıt defteri kayıtlarını verir ve istediğiniz birini yükleme imkânı sunar. \n\tVersiyon: \n\t\tMevcut versiyonu söyler. \n\tÇıkış/Kapat: \n\t\tProgramı kapatır. \n\tSil: \n\t\tProgram tarafından oluşturulmuş kayıt defteri ana anahtarını ve içindeki kayıtları silmeye yarar. \n\n",
+        "amount_question": "Miktar: ",
+        "start":  "\n\nHAZIRLANIN, SPAM BAŞLIYOR VE BAŞLAMADAN ÖNCE \"{waiting_period}\" SANİYENİZ VAR!!!!\n\n",
+        "writing_amount_question":  "\nTüm mesajlarınızı seçtiniz. Şimdi her bir mesajın toplamda \nkaç kere yazılacağını seçmeniz gerekiyor. \n\nHer bir mesaj toplamda şu kadar yazılacak {limits}: ",
+        "start_delay_question":  "\nŞimdi Enter’a bastığınızda toplam kaç saniye sonra \nspamin başlayacağını seçmelisiniz. \n\nŞu kadar sürem olacak {limits}: ",
+        "ready_txt": "\nHer şey hazır. \"ENTER\" tuşuna bastığınız anda \ntoplamda \"{total_msg}\" mesaj yağmadan önce \"{waiting_period}\" saniyeniz olacak.\n",
+        "msg_no": "{msg_no}. mesaj: ",
+        "amount_info": "Seçiminizi yaptınız. Seçiminiz: {different_msg_amount}",
+        "msg_preparation": "\nSizden her bir mesajda ne yazılacağını soracağız. Toplamda \"{different_msg_amount}\" tane soru olacak.",
+        "quit_txt": "Devam etmemeyi seçtiniz. Çıkış yapılıyor...",
+        "invalid_option": "\n\nLütfen geçerli bir seçenek giriniz\n\n",
+        "reg_save_question": "Az önce gerçekleşmiş olan spami kayıt defterine kaydedip bir dahaki sefere hızlıca erişebilirsiniz. \nBunu istiyor musunuz? \n\nE/EVET : evet, mevcut spami kaydet.\nH/HAYIR  : hayır, mevcut spami kaydetme. \n\nSeçiminiz: ",
+        "again_question": "\n\nAynı mesajlarla bir tur daha ister misiniz?\n\nE/EVET : evet, aynı döngüyü yeniden başlat. \nH/HAYIR  : hayır, programı kapat. \n\nSeçiminiz: "
+    },
+
+
+    // text in the RegCleanUp_mgr.py file
+    "RegCleanUp_mgr.py": {
+        "cleanup_options": "\n\nNeyi silmek istiyorsunuz? \n\n1: Ana kayıt defteri anahtarı (HKCU\\Software\\AutoSpammer) \n2: Belirli bir kayıt defteri anahtarı (HKCU\\Software\\AutoSpammer\\[kayıt ismi]) \n3: İptal et", 
+        "your_choice": "\n\nSeçiminiz: ",
+        "invalid_option": "\n\nLütfen geçerli bir seçenek giriniz\n\n",
+        "saves_list": "\nŞu anda şu kayıtlarınız mevcut: \n\n",
+        "no_save_found": "\n\nŞu anda hiçbir kaydınız bulunmamaktadır. Kayıt oluşturmak için istediğiniz ayarlarla bir spam yapın, \nspamdan sonra sorulacak kayıt sorusunu kabul edin ve bir isim seçin. Eğer spam bittikten sonra \nbile soru sorulmuyorsa kodu bir düzenleyicide açın ve 'src\\main.py' dosyasındaki ilk satırlarda \n'ALLOW_SAVE_SPAM_QUESTION' sabitinin 'True' olduğundan emin olun.",
+        "operation_cancelled": "\n\nİşlem iptal edildi. Hiçbir şey silinmedi.",
+        "SAFE_MODE": "\n\nGüvenlik kilidi açık olduğu için kayıt silinemedi. Eğer bu işlemi onaylıyorsanız güvenlik kilidini kapatın ve tekrar deneyin.",
+        "UnknownError": "\n\nİşlem sırasında bilinmeyen bir hata çıktı. İşlem başarısız oldu. \nHata: {e}",
+        "approve_deletion": "\n{key} anahtarı kalıcı olarak silinecek. Onaylıyor musunuz? (E/H)\n\n",
+        "powershell_script_running": "\nBir PowerShell scripti çalıştırılıyor.",
+        "SubprocessError": "\n\nPowerShell scripti çalışırken bir hata oluştu. İşlem başarısız oldu. Daha fazla bilgi için {log_file} dosyasına bakabilirsiniz.",
+        "FileNotFoundError": "\n\n'RegCleaner.ps1' bulunamadı. Silinmiş veya ismi değiştirilmiş olabilir. İşlem başarısız oldu.",
+        "successfully_deleted": "İşlem tamamlandı. Daha fazla bilgi için {log_file} dosyasına bakabilirsiniz."
+    },
+
+
+    // text in the GetPath function
+    "get_path": {
+        "KeyError": "Hata: Verilen parametrede bir hata var, lütfen parametreyi düzeltin ve tekrar deneyin. Yanlış parametre: \"{TargetObj}\"",
+        "UnknownError": "İstenilen konumu çekmeye çalışırken bilinmeyen bir hata oluştu. \naçıklama: {e}"
+    },
+
+    // text in the list_saves function
+    "list_saves": {
+        "UnknownError": "Kayıtları listelemeye çalışırken bilinmeyen bir hata oluştu. İşlem başarısız oldu. \naçıklama: {e}"
+    },
+
+
+    // text in the reg_save function
+    "reg_save": {
+        "InvalidParameterError": "Verilen parametre(ler) hatalı veya eksik. \nLütfen reg_save fonksiyonuna gönderilen parametreleri kontrol edin ve yeniden deneyin.", 
+        "NoSaveError": "\n\nHenüz hiçbir kayıt oluşturmadınız. Kayıt oluşturmak için istediğiniz ayarlarla bir spam yapın, \nspamdan sonra sorulacak kayıt sorusunu kabul edin ve bir isim seçin. Eğer spam bittikten sonra \nbile soru sorulmuyorsa kodu bir düzenleyicide açın ve 'AutoSpammer\\main.py' dosyasındaki ilk satırlarda \n'ALLOW_SAVE_SPAM_QUESTION' sabitinin 'True' olduğundan emin olun.",
+        "list_saves": "\n\nŞu anda şu kayıtlar mevcut:\n",
+        "load_save": "Hangi kaydı yüklemek istiyorsunuz? Lütfen yüklemek istediğiniz kaydın numarasını giriniz. \n\nYüklemek istediğiniz kayıt: ",
+        "save_name": "Yeni spam kaydının ismi ne olsun?\n\nYeni kaydın ismi şu olacak: ",
+        "successfully_saved": "\n\nYeni kayıt başarıyla oluşturuldu. Kayıt ismi: '{save_name}' \n\nArtık bu kaydı hızlıca kullanmak için tek yapmanız gereken şey başlangıçta \nbir sayı yerine 'saves' yazmak ve yüklemek istediğiniz kaydı seçmek.",
+        "FileExistsError": "Mevcut isimde bir kayıt zaten mevcut. Seçenekler: \n\n1: Başka bir isim seç \n\n2: Üzerine yaz \n\n3) İptal et \n\nSeçiminiz: ",
+        "PermissionError": "Kayıtları oluşturmaya/işlemeye çalışırken erişim reddedildi. İşlem başarısız oldu.",
+        "UnknownError": "Kayıtları oluşturmaya/işlemeye çalışırken bilinmeyen bir hata çıktı. İşlem başarısız oldu. \nHata: {e}",
+        "invalid_key_name": "\n\nBir registry anahtarının ismi '\\' içeremez. Lütfen geçerli bir anahtar ismi giriniz",
+        "invalid_option": "Lütfen geçerli bir seçenek giriniz"
+    }
+}
