@@ -46,11 +46,6 @@
         "UnknownError": "An unknown error occurred while trying to retrieve the requested location. \ndescription: {e}"
     },
 
-    // text in the list_saves function
-    "list_saves": {
-        "UnknownError": "An unknown error occurred while trying to list the saves. The operation failed. \ndescription: {e}"
-    },
-
 
     // text in the reg_save function
     "reg_save": {
