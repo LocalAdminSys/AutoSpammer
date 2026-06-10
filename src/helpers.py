@@ -141,7 +141,7 @@ def list_saves() -> list[str]:
 
 # Save and load spams from the registry
 def reg_save(command: str,
-            messages: list | None = None,
+            messages: list[str] | None = None,
             times: int | str | None = None,
             waiting_period: int | float | str | None = None,
             delays: int | float | str = 0.01,
