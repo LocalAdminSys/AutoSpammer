@@ -71,7 +71,7 @@ print(msg["language_selected"])
 cls = lambda: print("\033c")   # This function clears the console.
 
 # According to the limit dict, it returns a result (bool or str).
-def limit_mgr(source: str,  value: int, only_info: bool = False) -> bool | str:     
+def limit_mgr(source: str,  value: int | float, only_info: bool = False) -> bool | str:     
     """According to the limits dict, returns the result.
 
     According to the limits dict, ALLOW_LIMITS constant and the given value,
@@ -93,7 +93,7 @@ def limit_mgr(source: str,  value: int, only_info: bool = False) -> bool | str:
 
 
 # function to better control waiting times.
-def wait(time_in_seconds: int) -> bool:
+def wait(time_in_seconds: int | float) -> bool:
     """function to better control waiting times.
     
     If you want to disable waiting times, 
@@ -280,7 +280,7 @@ def last_selections() -> tuple[int, float, float]:
 
 
 # The function where the spam starts.
-def start(writing_amount: int, waiting_period: int | float, delay: int | float) -> bool:
+def start(writing_amount: int, waiting_period: int | float, delay: int | float) -> bool | None:
     """The function where the spam occurs."""
 
     cls()
