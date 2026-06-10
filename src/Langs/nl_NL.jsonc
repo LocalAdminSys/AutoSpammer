@@ -46,11 +46,6 @@
         "UnknownError": "Er is een onbekende fout opgetreden tijdens het ophalen van de gevraagde locatie. \nbeschrijving: {e}"
     },
 
-    // text in the list_saves function
-    "list_saves": {
-        "UnknownError": "Er is een onbekende fout opgetreden tijdens het proberen om de saves te tonen. De bewerking is mislukt. \nbeschrijving: {e}"
-    },
-
 
     // text in the reg_save function
     "reg_save": {
