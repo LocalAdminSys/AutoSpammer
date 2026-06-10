@@ -1,9 +1,9 @@
 # Created and developed by LocalAdminSys.
 # Licensed under MIT license
 
-__version__ = "1.0.0"
+__version__ = "1.0.1"
 
-import pyperclip   # This module writes text using the copy-paste method. (NOT RECOMMENDED).
+import pyperclip   # This module writes text using the copy-paste method.
 import pyautogui
 import time
 
@@ -59,7 +59,7 @@ ALLOW_NON_ASCII = False  # Allow Non-ASCII (Unicode) characters. Default is Fals
 MOVETO_NEXT_LINE = False   # Instead of sending the messages, move to the next line. (use shift + enter)
 USE_COPY_PASTE_SYSTEM = False   # Copy and paste the message instead of typing it directly (NOT RECOMMENDED).
 
-msg = get_json(src="main.py", ALLOW_NON_ASCII=ALLOW_NON_ASCII)
+msg = get_json("main.py", ALLOW_NON_ASCII)
 print(msg["language_selected"])
 
 # endregion 
@@ -160,18 +160,18 @@ def introduction() -> int:
                                                                                              ).lower().strip()
         match different_msg_amount:
             case "saves" | "kayitlar" | "kayıtlar" | "records":
-                try:
-                    messages, writing_amount, waiting_period, delay = reg_save(command="load_save")
+                result = reg_save(command="load_save")
                 
-                # I added these lines to prevent the program from crashing if the 'reg_save' func returns 'False' 
-                # due to an error. No further explanation is needed as it's already explained in the reg_save func.
-                except:
-                    pass
-
-                else:
+                if isinstance(result, tuple):
+                    messages, writing_amount, waiting_period, delay = result
                     message_list.extend(messages)
                     start(writing_amount=writing_amount, waiting_period=waiting_period, delay=delay)
                     restart(writing_amount=writing_amount, waiting_period=waiting_period, delay=delay)
+
+                # If an error occurs within the `reg_save` function, it will be explained 
+                # within the function itself. No further explanation is needed here.
+                elif result is False:
+                    pass
 
             case "version" | "versiyon" | "versie":
                 cls()
