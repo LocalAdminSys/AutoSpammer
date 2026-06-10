@@ -124,7 +124,7 @@ def get_json(src: str, ALLOW_NON_ASCII: bool = False) -> dict:
 
 
 # Function to list saves.
-def list_saves() -> bool | list:
+def list_saves() -> list[str]:
     """This function lists the existing save in the registry. 
     It is used in both 'load_save' and 'list_saves' commands.
     """
@@ -136,19 +136,14 @@ def list_saves() -> bool | list:
         
     except FileNotFoundError:
         return []
-    
-    except Exception as e:
-        msg = get_json("list_saves")
-        print(msg["UnknownError"].format(e = e))
-        return False
 
 
 
 # Save and load spams from the registry
 def reg_save(command: str,
-            messages: list = None,
-            times: int | str = None,
-            waiting_period: int | float | str = None,
+            messages: list | None = None,
+            times: int | str | None = None,
+            waiting_period: int | float | str | None = None,
             delays: int | float | str = 0.01,
             ) -> bool | tuple | None:
     """This function is used to save and load spams from the registry."""
@@ -164,8 +159,9 @@ def reg_save(command: str,
         print(msg["InvalidParameterError"])
         return False
 
-    saves = list_saves()
 
+
+    saves = list_saves()
     # If there are no saves or an error occurs, the program should not continue the function; 
     # if the 'saves' variable is 'None' or 'False', this function should also return.
     if not saves and command != "create_save":
@@ -290,12 +286,17 @@ def reg_save(command: str,
                 except Exception as e:
                     print(msg["UnknownError"].format(e = e))
                     return False
+
+            # This None check is already handled in the higher‑level logic. It is repeated here 
+            # to help the type checker correctly narrow the type before writing to the registry.
+            if times == None:
+                return False
             
             # Creating the save
             try:
                 with winreg.CreateKey(winreg.HKEY_CURRENT_USER, fr"{main_key}\{save_name}") as key:
                     winreg.SetValueEx(key, "Messages", 0, winreg.REG_MULTI_SZ, messages)
-                    winreg.SetValueEx(key, "Times", 0, winreg.REG_DWORD, int(times))
+                    winreg.SetValueEx(key, "Times", 0, winreg.REG_DWORD, times)
                     winreg.SetValueEx(key, "waiting_period", 0, winreg.REG_SZ, str(waiting_period))   # Float and str can't be written to dword, therefore using reg_sz.
                     winreg.SetValueEx(key, "CreationTime", 0, winreg.REG_SZ, time.ctime())   # Just for information, it's not used in the program.
                     if delays: winreg.SetValueEx(key, "Delays", 0, winreg.REG_SZ, str(delays))
