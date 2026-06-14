@@ -1,0 +1,6 @@
+# VS Code files
+.vs/
+.vscode/
+
+# Python files
+__pycache__/
